@@ -1,0 +1,50 @@
+@import '../colors';
+@import '../values';
+
+.certificates {
+    min-height: 100vh;
+    padding: calc(#{$navbarheight} + 1rem) 0 2rem 0;
+    background-color: $background;
+    overflow-x: hidden;
+
+    .wrapper {
+        max-width: 1080px;
+        margin: 20px auto;
+        padding: 0 20px;
+        position: relative;
+
+        .certificatesOpen {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: $white;
+            // background: $primary;
+            border-radius: 10px;
+            width: fit-content;
+            padding: 8px 10px;
+            font-family: 'Ubuntu Mono', monospace;
+            letter-spacing: 0.5px;
+        }
+
+        .certificatesClose {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            color: $white;
+            // background: $primary;
+            border-radius: 10px;
+            width: fit-content;
+            padding: 8px 10px;
+            font-family: 'Ubuntu Mono', monospace;
+            letter-spacing: 0.5px;
+        }
+
+        .certificates_content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3.6rem;
+        }
+    }
+}
