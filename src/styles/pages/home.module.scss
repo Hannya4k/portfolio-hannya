@@ -2,6 +2,21 @@
 @import '../colors';
 @import '../values';
 
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 2s ease-in-out;
+}
+
 // @mixin keyframes($animation-name) {
 //     @-webkit-keyframes #{$animation-name} {
 //         @content;

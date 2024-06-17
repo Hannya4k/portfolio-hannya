@@ -8,7 +8,7 @@ const welcomeText = `I am, ${About.firstName}  ${About.lastName}`;
 
 const HomePage = () => {
     return (
-        <div className={styles.home}>
+        <div className={`${styles.home} ${styles.fadeIn}`}>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <img src={profilePic} alt="Profile" className={styles.image} />
                 <h2 className={styles.title}>{welcomeText}</h2>
