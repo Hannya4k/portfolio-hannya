@@ -1,15 +1,20 @@
 import { useState } from 'react';
 import { IoClose, IoMenu } from 'react-icons/io5';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 import { Contact, NavLinks } from '../data';
 import styles from '../styles/components/navbar.module.scss';
 
 const Navbar = () => {
     const [isMenuOpen, setIsmenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleMobileMenuToggle = () => {
         setIsmenuOpen(!isMenuOpen);
+    };
+
+    const handleLogoClick = () => {
+        navigate('/');
     };
 
     return (
@@ -17,9 +22,7 @@ const Navbar = () => {
             <div className={styles.navbar}>
                 <h2
                     className={styles.logo}
-                    onClick={() => {
-                        location.href = '/';
-                    }}
+                    onClick={handleLogoClick}
                 >
                     {'Karl</>'}
                 </h2>
