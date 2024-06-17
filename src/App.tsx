@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
@@ -17,6 +17,7 @@ const App = () => {
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/certificates" element={<CertificatesPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
   );
