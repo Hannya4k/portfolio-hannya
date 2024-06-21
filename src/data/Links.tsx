@@ -1,5 +1,5 @@
 
-import { AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineMail, AiOutlineSkype } from 'react-icons/ai';
 import { FaFacebook } from 'react-icons/fa';
 import { ImGithub, ImLinkedin } from 'react-icons/im';
 import { SiInstagram } from 'react-icons/si';
@@ -35,5 +35,10 @@ export const Links: LinkTypes[] = [
         title: 'Email',
         link: 'mailto:karlthegamer24@gmail.com',
         icon: <AiOutlineMail color="#000000dc" />,
+    },
+    {
+        title: 'Skype',
+        link: 'skype:live:karlandoque?chat', // replace 'your_skype_username' with your actual Skype username
+        icon: <AiOutlineSkype color="#000000dc" />,
     },
 ];
