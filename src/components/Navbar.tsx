@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { IoClose, IoMenu } from 'react-icons/io5';
 import { NavLink, useNavigate } from 'react-router-dom';
 
-import { Contact, NavLinks } from '../data';
+// import { Contact, NavLinks } from '../data';
+import { NavLinks } from '../data';
+
 import styles from '../styles/components/navbar.module.scss';
 
 const Navbar = () => {
