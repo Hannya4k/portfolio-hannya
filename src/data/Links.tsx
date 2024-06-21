@@ -38,7 +38,7 @@ export const Links: LinkTypes[] = [
     },
     {
         title: 'Skype',
-        link: 'skype:live:karlandoque?chat', // replace 'your_skype_username' with your actual Skype username
+        link: 'skype:live:.cid.f7be91ec788557fe?chat', // replace 'your_skype_username' with your actual Skype username
         icon: <AiOutlineSkype color="#000000dc" />,
     },
 ];
