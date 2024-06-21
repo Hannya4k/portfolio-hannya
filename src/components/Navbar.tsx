@@ -44,14 +44,14 @@ const Navbar = () => {
                             {link.title}
                         </NavLink>
                     ))}
-                    <a
+                    {/* <a
                         target="_blank"
                         className={`${styles.btncv} ${styles.link}`}
                         href={Contact.cv}
                         rel="noreferrer"
                     >
                         Download CV
-                    </a>
+                    </a> */}
                 </div>
                 <div className={styles.mobileview}>
                     <div
@@ -102,14 +102,14 @@ const Navbar = () => {
                         {link.title}
                     </NavLink>
                 ))}
-                <a
+                {/* <a
                     target="_blank"
                     className={`${styles.mobileBtncv} ${styles.mobileLinks}`}
                     href={Contact.cv}
                     rel="noreferrer"
                 >
                     Download CV
-                </a>
+                </a> */}
             </div>
         </>
     );

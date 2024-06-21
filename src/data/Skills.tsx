@@ -2,7 +2,7 @@ import { DiDjango } from 'react-icons/di';
 import {
     FaHtml5,
     FaJava,
-    FaPhp,
+    // FaPhp,
     FaPython,
     FaReact,
     FaSass,
@@ -11,7 +11,7 @@ import {
 import { ImGit } from 'react-icons/im';
 import { IoLogoJavascript } from 'react-icons/io';
 import {
-    SiBootstrap,
+    // SiBootstrap,
     SiCss3,
     SiDart,
     SiExpo,
@@ -83,11 +83,11 @@ export const Skills: SkillsType[] = [
         icon: <FaSass color="#CC6699" />,
         link: 'https://sass-lang.com/',
     },
-    {
-        name: 'Bootstrap',
-        icon: <SiBootstrap color="#7952B3" />,
-        link: 'https://getbootstrap.com/',
-    },
+    // {
+    //     name: 'Bootstrap',
+    //     icon: <SiBootstrap color="#7952B3" />,
+    //     link: 'https://getbootstrap.com/',
+    // },
     {
         name: 'Git',
         icon: <ImGit color="#F05032" />,
@@ -98,11 +98,11 @@ export const Skills: SkillsType[] = [
         icon: <SiVisualstudiocode color="#007ACC" />,
         link: 'https://code.visualstudio.com/',
     },
-    {
-        name: 'PHP',
-        icon: <FaPhp color="#777BB4" />,
-        link: 'https://www.php.net/',
-    },
+    // {
+    //     name: 'PHP',
+    //     icon: <FaPhp color="#777BB4" />,
+    //     link: 'https://www.php.net/',
+    // },
     {
         name: 'Java',
         icon: <FaJava color="#007396" />,

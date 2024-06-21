@@ -9,19 +9,23 @@ export const NavLinks: NavLinkType[] = [
         linkTo: '/',
     },
     {
+        title: 'Resume',
+        linkTo: '/resume',
+    },
+    {
         title: 'Skills',
         linkTo: '/skills',
     },
     {
-        title: 'Experience',
-        linkTo: '/experience',
+        title: 'Certifications',
+        linkTo: '/certificates',
     },
+    // {
+    //     title: 'Experience',
+    //     linkTo: '/experience',
+    // },
     {
         title: 'Projects',
         linkTo: '/projects',
-    },
-    {
-        title: 'Certificates',
-        linkTo: '/certificates',
     },
 ];
