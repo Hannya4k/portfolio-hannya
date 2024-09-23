@@ -21,6 +21,7 @@ import {
   SiVisualstudiocode,
   SiNextdotjs,
   SiAntdesign,
+  SiFigma,
 } from "react-icons/si";
 
 interface SkillsType {
@@ -120,5 +121,10 @@ export const Skills: SkillsType[] = [
     name: "Ant Design",
     icon: <SiAntdesign color="#0170FE" />,
     link: "https://ant.design/",
+  },
+  {
+    name: "Figma",
+    icon: <SiFigma color="#F24E1E" />,
+    link: "https://www.figma.com/",
   },
 ];
