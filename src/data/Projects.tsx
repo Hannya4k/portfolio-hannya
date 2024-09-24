@@ -8,13 +8,13 @@ interface ProjectsType {
 export const Projects: ProjectsType[] = [
   {
     title: "BetterMomsh",
-    description: "A Pregnancy mobile app with health monitor",
+    description: "A Pregnancy mobile app with health monitor.",
     image: "https://imgur.com/fRcQxRY.png",
     GitHub: " ",
   },
   {
     title: "Portfolio",
-    description: "My personal portfolio website",
+    description: "My personal portfolio website.",
     image: "https://imgur.com/iLzO2eX.png",
     GitHub: " ",
   },
@@ -27,7 +27,7 @@ export const Projects: ProjectsType[] = [
   },
   {
     title: "GalleryGrid",
-    description: "Bootleg of Pinterest",
+    description: "A bootleg version of Pinterest.",
     image: "https://imgur.com/sD6Ec0j.png",
     GitHub: "",
   },
@@ -41,15 +41,14 @@ export const Projects: ProjectsType[] = [
   {
     title: "ACS Tablet",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc.",
-    image: "",
+      "ACS is a website and one of the main products of Aquila Softwares. I am converting it into a tablet version for easy access by doctors.",
+    image: "https://imgur.com/C1nSYpv.png",
     GitHub: "",
   },
   {
     title: "Comcare Insurance Agency Website",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc.",
-    image: "",
+    description: "An insurance system for Comcare.",
+    image: "https://imgur.com/iKnAVvZ.png",
     GitHub: "",
   },
 ];
