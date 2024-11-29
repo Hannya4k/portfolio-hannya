@@ -22,6 +22,8 @@ import {
   SiNextdotjs,
   SiAntdesign,
   SiFigma,
+  SiCsharp,
+  SiPostgresql,
 } from "react-icons/si";
 
 interface SkillsType {
@@ -31,6 +33,11 @@ interface SkillsType {
 }
 
 export const Skills: SkillsType[] = [
+  {
+    name: "C#",
+    icon: <SiCsharp color="#239120" />,
+    link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
+  },
   {
     name: "JavaScript",
     icon: <IoLogoJavascript color="#F7DF1E" />,
@@ -70,6 +77,11 @@ export const Skills: SkillsType[] = [
     name: "MySQL",
     icon: <SiMysql color="#4479A1" />,
     link: "https://www.mysql.com/",
+  },
+  {
+    name: "PostgreSQL",
+    icon: <SiPostgresql color="#336791" />,
+    link: "https://www.postgresql.org/",
   },
   {
     name: "HTML",
