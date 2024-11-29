@@ -20,20 +20,20 @@ export const Certificates: CertificatesType[] = [
     title: "Fronted: HTML, CSS, JavaScript and React",
     image: "https://imgur.com/HrVHZTu.png",
   },
-  // {
-  //     title: 'PSITE Davao Region Officer',
-  //     image: 'https://imgur.com/EyiNsmC.png',
-  // },
-  // {
-  //     title: 'PSITE working committee',
-  //     image: 'https://imgur.com/vod4MgS.png',
-  // },
-  // {
-  //     title: 'Mentor',
-  //     image: 'https://imgur.com/9gURhjL.png',
-  // },
-  // {
-  //     title: 'CCE-CSG',
-  //     image: 'https://imgur.com/xGjHPCW.png',
-  // },
+  {
+    title: "PSITE Davao Region Officer",
+    image: "https://imgur.com/EyiNsmC.png",
+  },
+  {
+    title: "PSITE working committee",
+    image: "https://imgur.com/vod4MgS.png",
+  },
+  {
+    title: "Mentor",
+    image: "https://imgur.com/9gURhjL.png",
+  },
+  {
+    title: "CCE-CSG",
+    image: "https://imgur.com/xGjHPCW.png",
+  },
 ];
