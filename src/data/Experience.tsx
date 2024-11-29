@@ -15,10 +15,10 @@ export const Experience: ExperienceType[] = [
     content: {
       text: " ",
       list: [
-        "Developed BetterMomsh: A Pregnancy mobile app using React Native.",
-        "Assisted in implementing the design in Clinix Plus mobile app.",
-        "Implemented the Design in Compass mobile app.",
-        "Convert ACS Web to a mobile/tablet app.",
+        "Developed BetterMomsh, a pregnancy mobile app, using React Native.",
+        "Assisted in implementing the design for the Clinix Plus mobile app.",
+        "Implemented the design for the Compass mobile app and parts of the web platform.",
+        "Implemented design features for the ACS Web platform tailored for doctors.",
       ],
       tech: [
         "React.js",
@@ -29,6 +29,7 @@ export const Experience: ExperienceType[] = [
         "HTML",
         "CSS",
         "SASS",
+        "AntDesign",
       ],
     },
   },
@@ -36,13 +37,12 @@ export const Experience: ExperienceType[] = [
     title: "Project Based Developer",
     subtitle: "Comcare Insurance Agency - Davao City, Philippines",
     // website: ' ',
-    date: "January 2024 - Current",
+    date: "January 2024 - November 2024",
     content: {
       text: " ",
       list: [
-        "Helped debug issues.",
-        "Implemented requested features.",
-        "Developed New Comcare Insurance System Website using Next.js.",
+        "Helped debug issues and implemented requested features.",
+        "Developed the new Comcare website using Next.js.",
       ],
       tech: [
         "PHP",
