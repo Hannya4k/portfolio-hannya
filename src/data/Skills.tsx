@@ -18,11 +18,11 @@ import {
   SiFlutter,
   SiMysql,
   SiTypescript,
-  SiVisualstudiocode,
+  // SiVisualstudio,
   SiNextdotjs,
   SiAntdesign,
   SiFigma,
-  SiCsharp,
+  SiDotnet,
   SiPostgresql,
 } from "react-icons/si";
 
@@ -35,7 +35,7 @@ interface SkillsType {
 export const Skills: SkillsType[] = [
   {
     name: "C#",
-    icon: <SiCsharp color="#239120" />,
+    icon: <SiDotnet color="#239120" />,
     link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
   },
   {
@@ -104,11 +104,11 @@ export const Skills: SkillsType[] = [
     icon: <ImGit color="#F05032" />,
     link: "https://git-scm.com/",
   },
-  {
-    name: "VSCode",
-    icon: <SiVisualstudiocode color="#007ACC" />,
-    link: "https://code.visualstudio.com/",
-  },
+  // {
+  //   name: "VSCode",
+  //   icon: <SiVisualstudio color="#007ACC" />,
+  //   link: "https://code.visualstudio.com/",
+  // },
   {
     name: "Java",
     icon: <FaJava color="#007396" />,
