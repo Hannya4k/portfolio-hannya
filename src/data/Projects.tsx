@@ -30,13 +30,13 @@ export const Projects: ProjectsType[] = [
     image: "https://imgur.com/G2ghkvC.png",
     GitHub: "",
   },
-  {
-    title: "ACS Tablet",
-    description:
-      "ACS is a website and one of the main products of Aquila Softwares. I am converting it into a tablet version for easy access by doctors.",
-    image: "https://imgur.com/C1nSYpv.png",
-    GitHub: "",
-  },
+  // {
+  //   title: "ACS Tablet",
+  //   description:
+  //     "ACS is a website and one of the main products of Aquila Softwares. I am converting it into a tablet version for easy access by doctors.",
+  //   image: "https://imgur.com/C1nSYpv.png",
+  //   GitHub: "",
+  // },
   {
     title: "ChatterBox",
     description:
