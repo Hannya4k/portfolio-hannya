@@ -11,7 +11,7 @@ export const Experience: ExperienceType[] = [
     title: "Junior Software Engineer",
     subtitle: "Aquila Softwares Corporation - Davao City, Philippines",
     website: "https://aquilasoftwares.com",
-    date: "September 2023 - Current",
+    date: "September 2023 - January 2025",
     content: {
       text: " ",
       list: [

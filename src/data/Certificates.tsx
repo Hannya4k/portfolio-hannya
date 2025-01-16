@@ -6,34 +6,34 @@ interface CertificatesType {
 export const Certificates: CertificatesType[] = [
   {
     title: "Python Seminar",
-    image: "https://imgur.com/px3wQlN.png",
+    image: "https://i.imgur.com/px3wQlN.png",
   },
   {
     title: "Fundamentals of Programming",
-    image: "https://imgur.com/mUcLujI.png",
+    image: "https://i.imgur.com/mUcLujI.png",
   },
   {
     title: "Backend: Python and Django",
-    image: "https://imgur.com/OUmYRDX.png",
+    image: "https://i.imgur.com/OUmYRDX.png",
   },
   {
     title: "Fronted: HTML, CSS, JavaScript and React",
-    image: "https://imgur.com/HrVHZTu.png",
+    image: "https://i.imgur.com/HrVHZTu.png",
   },
   {
     title: "PSITE Davao Region Officer",
-    image: "https://imgur.com/EyiNsmC.png",
+    image: "https://i.imgur.com/EyiNsmC.jpg",
   },
   {
     title: "PSITE working committee",
-    image: "https://imgur.com/vod4MgS.png",
+    image: "https://i.imgur.com/vod4MgS.jpg",
   },
   {
     title: "Mentor",
-    image: "https://imgur.com/9gURhjL.png",
+    image: "https://i.imgur.com/9gURhjL.jpg",
   },
   {
     title: "CCE-CSG",
-    image: "https://imgur.com/xGjHPCW.png",
+    image: "https://i.imgur.com/xGjHPCW.jpg",
   },
 ];
