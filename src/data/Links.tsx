@@ -22,12 +22,12 @@ export const Links: LinkTypes[] = [
   },
   {
     title: "GitHub",
-    link: "https://github.com/Hannya4k?tab=repositories",
+    link: "https://github.com/Hannya4k",
     icon: <ImGithub color="#000000dc" />,
   },
   {
     title: "LinkedIn",
-    link: "www.linkedin.com/in/karl-andoque-hannya",
+    link: "https://www.linkedin.com/in/karl-andoque-hannya/",
     icon: <ImLinkedin color="#000000dc" />,
   },
   {
