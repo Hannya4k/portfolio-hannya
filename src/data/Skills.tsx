@@ -2,6 +2,7 @@ import { DiDjango } from "react-icons/di";
 import {
   FaHtml5,
   FaJava,
+  FaPhp,
   // FaPhp,
   FaPython,
   FaReact,
@@ -138,5 +139,10 @@ export const Skills: SkillsType[] = [
     name: "Figma",
     icon: <SiFigma color="#F24E1E" />,
     link: "https://www.figma.com/",
+  },
+  {
+    name: "PHP",
+    icon: <FaPhp color="#777BB4" />,
+    link: "https://www.php.net/",
   },
 ];

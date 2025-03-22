@@ -21,6 +21,14 @@ export const Certificates: CertificatesType[] = [
     image: "https://i.imgur.com/HrVHZTu.png",
   },
   {
+    title: "Web Development using JavaScript",
+    image: "https://imgur.com/oSw5r9R.jpg",
+  },
+  {
+    title: "Web Development using ReactJS",
+    image: "https://imgur.com/tGvhIq9.jpg",
+  },
+  {
     title: "PSITE Davao Region Officer",
     image: "https://i.imgur.com/EyiNsmC.jpg",
   },
@@ -35,5 +43,17 @@ export const Certificates: CertificatesType[] = [
   {
     title: "CCE-CSG",
     image: "https://i.imgur.com/xGjHPCW.jpg",
+  },
+  {
+    title: "Office Etiquette, Work Ethics and Mental Hygiene",
+    image: "https://imgur.com/VxRhgWp.jpg",
+  },
+  {
+    title: "Leadership and Innovative Culture in the Office",
+    image: "https://imgur.com/LUwLq2m.jpg",
+  },
+  {
+    title: "Gender Sensitivity and Sexual Harassment Awareness",
+    image: "https://imgur.com/N5VR7aM.jpg",
   },
 ];
