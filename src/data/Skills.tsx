@@ -25,6 +25,8 @@ import {
   SiFigma,
   SiDotnet,
   SiPostgresql,
+  SiMongodb,
+  SiExpress,
 } from "react-icons/si";
 
 interface SkillsType {
@@ -34,11 +36,6 @@ interface SkillsType {
 }
 
 export const Skills: SkillsType[] = [
-  {
-    name: "C#",
-    icon: <SiDotnet color="#239120" />,
-    link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
-  },
   {
     name: "JavaScript",
     icon: <IoLogoJavascript color="#F7DF1E" />,
@@ -64,16 +61,7 @@ export const Skills: SkillsType[] = [
     icon: <SiExpo color="#000020" />,
     link: "https://expo.dev/",
   },
-  {
-    name: "Flutter",
-    icon: <SiFlutter color="#02569B" />,
-    link: "https://flutter.dev/",
-  },
-  {
-    name: "Dart",
-    icon: <SiDart color="#0175C2" />,
-    link: "https://dart.dev/",
-  },
+
   {
     name: "MySQL",
     icon: <SiMysql color="#4479A1" />,
@@ -83,6 +71,16 @@ export const Skills: SkillsType[] = [
     name: "PostgreSQL",
     icon: <SiPostgresql color="#336791" />,
     link: "https://www.postgresql.org/",
+  },
+  {
+    name: "MongoDB",
+    icon: <SiMongodb color="#47A248" />,
+    link: "https://www.mongodb.com/",
+  },
+  {
+    name: "Express.js",
+    icon: <SiExpress color="#000000" />,
+    link: "https://expressjs.com/",
   },
   {
     name: "HTML",
@@ -110,11 +108,7 @@ export const Skills: SkillsType[] = [
   //   icon: <SiVisualstudio color="#007ACC" />,
   //   link: "https://code.visualstudio.com/",
   // },
-  {
-    name: "Java",
-    icon: <FaJava color="#007396" />,
-    link: "https://www.java.com/",
-  },
+
   {
     name: "Python",
     icon: <FaPython color="#3776AB" />,
@@ -144,5 +138,25 @@ export const Skills: SkillsType[] = [
     name: "PHP",
     icon: <FaPhp color="#777BB4" />,
     link: "https://www.php.net/",
+  },
+  {
+    name: "C#",
+    icon: <SiDotnet color="#239120" />,
+    link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
+  },
+  {
+    name: "Flutter",
+    icon: <SiFlutter color="#02569B" />,
+    link: "https://flutter.dev/",
+  },
+  {
+    name: "Dart",
+    icon: <SiDart color="#0175C2" />,
+    link: "https://dart.dev/",
+  },
+  {
+    name: "Java",
+    icon: <FaJava color="#007396" />,
+    link: "https://www.java.com/",
   },
 ];
