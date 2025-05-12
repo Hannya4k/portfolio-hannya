@@ -1,5 +1,5 @@
-@import '../colors';
-@import '../values';
+@use '../colors' as *;
+@use '../values' as *;
 
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {

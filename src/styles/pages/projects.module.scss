@@ -1,5 +1,5 @@
-@import '../colors';
-@import '../values';
+@use '../colors' as *;
+@use '../values' as *;
 
 .projects {
     min-height: 100vh;

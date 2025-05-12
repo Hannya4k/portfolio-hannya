@@ -1,6 +1,6 @@
-@import "../fonts";
-@import "../colors";
-@import "../values";
+@use "../fonts" as *;
+@use "../colors" as *;
+@use "../values" as *;
 
 .resume {
     min-height: 100vh;
