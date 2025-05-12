@@ -5,9 +5,14 @@ interface CertificatesType {
 
 export const Certificates: CertificatesType[] = [
   {
-    title: "Python Seminar",
-    image: "https://i.imgur.com/px3wQlN.png",
+    title: "Ethical Hacking and DFIR",
+    image: "https://imgur.com/rzsGJ9v.png",
   },
+  {
+    title: "Introduction to Cybersecurity",
+    image: "https://imgur.com/8kkOPI6.png",
+  },
+
   {
     title: "Fundamentals of Programming",
     image: "https://i.imgur.com/mUcLujI.png",
@@ -19,6 +24,10 @@ export const Certificates: CertificatesType[] = [
   {
     title: "Fronted: HTML, CSS, JavaScript and React",
     image: "https://i.imgur.com/HrVHZTu.png",
+  },
+  {
+    title: "Python Seminar",
+    image: "https://i.imgur.com/px3wQlN.png",
   },
   {
     title: "Web Development using JavaScript",

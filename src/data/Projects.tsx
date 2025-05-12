@@ -30,6 +30,13 @@ export const Projects: ProjectsType[] = [
     image: "https://i.imgur.com/G2ghkvC.png",
     GitHub: "",
   },
+  {
+    title: "Fruit Grader",
+    description:
+      "Fruit Type Classification and Quality Grading using CNN CBAM.",
+    image: "https://imgur.com/aJdG4ZA.png",
+    GitHub: "",
+  },
   // {
   //   title: "ACS Tablet",
   //   description:

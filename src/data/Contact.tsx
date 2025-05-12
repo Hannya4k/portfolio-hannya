@@ -3,5 +3,5 @@ interface ContactType {
 }
 
 export const Contact: ContactType = {
-  cv: "https://drive.google.com/file/d/1DflnLhsrd1QnnJrCsfUqWk8zQa9roOKn/view?usp=sharing",
+  cv: "https://drive.google.com/file/d/1p_UkNGgutZYW2AuY1Q-zBJP8AIDDkFtv/view?usp=sharing",
 };
