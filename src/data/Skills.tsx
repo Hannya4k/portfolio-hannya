@@ -11,6 +11,7 @@ import {
   FaNetworkWired,
   FaVimeoV,
 } from "react-icons/fa";
+import { GiHydra } from "react-icons/gi";
 import { ImGit } from "react-icons/im";
 import { IoLogoJavascript } from "react-icons/io";
 import {
@@ -176,5 +177,10 @@ export const Skills: SkillsType[] = [
     name: "Nmap",
     icon: <FaNetworkWired color="#4682B4" />,
     link: "https://nmap.org/",
+  },
+  {
+    name: "Hydra",
+    icon: <GiHydra color="#FF0000" />,
+    link: "https://github.com/vanhauser-thc/thc-hydra",
   },
 ];

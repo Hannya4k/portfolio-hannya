@@ -8,6 +8,17 @@ export interface ExperienceType {
 
 export const Experience: ExperienceType[] = [
   {
+    title: "Cybersecurity Intern",
+    subtitle: "Tech Advise Solutions and Services - Davao City, Philippines",
+    website: "techadviseph.com",
+    date: "May 2025 - Present",
+    content: {
+      text: " ",
+      list: ["Learn and Study how LMNTRIX works."],
+      tech: ["LMNTRIX", "Blue Team"],
+    },
+  },
+  {
     title: "Junior Software Engineer",
     subtitle: "Aquila Softwares Corporation - Davao City, Philippines",
     website: "https://aquilasoftwares.com",

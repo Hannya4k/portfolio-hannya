@@ -5,6 +5,10 @@ interface CertificatesType {
 
 export const Certificates: CertificatesType[] = [
   {
+    title: "Introduction to Threat Hunting",
+    image: "https://imgur.com/9yixB1q.png",
+  },
+  {
     title: "Ethical Hacking and DFIR",
     image: "https://imgur.com/rzsGJ9v.png",
   },

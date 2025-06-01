@@ -1,7 +1,7 @@
 import { AiOutlineMail } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { ImGithub, ImLinkedin } from "react-icons/im";
-import { SiInstagram } from "react-icons/si";
+// import { SiInstagram } from "react-icons/si";
 
 interface LinkTypes {
   title: string;
@@ -10,11 +10,11 @@ interface LinkTypes {
 }
 
 export const Links: LinkTypes[] = [
-  {
-    title: "Instagram",
-    link: "https://www.instagram.com/hannya4k/",
-    icon: <SiInstagram color="#000000dc" />,
-  },
+  // {
+  //   title: "Instagram",
+  //   link: "https://www.instagram.com/hannya4k/",
+  //   icon: <SiInstagram color="#000000dc" />,
+  // },
   {
     title: "Facebook",
     link: "https://www.facebook.com/karl.andoque/",
