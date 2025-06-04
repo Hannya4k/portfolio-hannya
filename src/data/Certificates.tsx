@@ -5,6 +5,10 @@ interface CertificatesType {
 
 export const Certificates: CertificatesType[] = [
   {
+    title: "Introduction to Vulnerability Management",
+    image: "https://imgur.com/atwGEGc.png",
+  },
+  {
     title: "Introduction to Threat Hunting",
     image: "https://imgur.com/9yixB1q.png",
   },
@@ -30,7 +34,7 @@ export const Certificates: CertificatesType[] = [
     image: "https://i.imgur.com/HrVHZTu.png",
   },
   {
-    title: "Python Seminar",
+    title: "Python Seminar Workshop",
     image: "https://i.imgur.com/px3wQlN.png",
   },
   {
@@ -50,7 +54,7 @@ export const Certificates: CertificatesType[] = [
     image: "https://i.imgur.com/vod4MgS.jpg",
   },
   {
-    title: "Mentor",
+    title: "CCE Skills Clinic - Mentor",
     image: "https://i.imgur.com/9gURhjL.jpg",
   },
   {
