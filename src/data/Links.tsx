@@ -18,22 +18,22 @@ export const Links: LinkTypes[] = [
   {
     title: "Facebook",
     link: "https://www.facebook.com/karl.andoque/",
-    icon: <FaFacebook color="#000000dc" />,
+    icon: <FaFacebook color="#f8f8ff" />,
   },
   {
     title: "GitHub",
     link: "https://github.com/Hannya4k",
-    icon: <ImGithub color="#000000dc" />,
+    icon: <ImGithub color="#f8f8ff" />,
   },
   {
     title: "LinkedIn",
     link: "https://www.linkedin.com/in/karl-andoque-hannya/",
-    icon: <ImLinkedin color="#000000dc" />,
+    icon: <ImLinkedin color="#f8f8ff" />,
   },
   {
     title: "Email",
-    link: "mailto:karlthegamer24@gmail.com",
-    icon: <AiOutlineMail color="#000000dc" />,
+    link: "mailto:k.andoque07@gmail.com",
+    icon: <AiOutlineMail color="#f8f8ff" />,
   },
   // {
   //     title: 'Skype',

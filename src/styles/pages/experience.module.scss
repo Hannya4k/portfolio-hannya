@@ -1,114 +1,100 @@
-@use '../colors' as *;
-@use '../values' as *;
+@use "../colors" as *;
+@use "../values" as *;
 
-@mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
+// @mixin keyframes($animation-name) {
+//     @-webkit-keyframes #{$animation-name} {
+//         @content;
+//     }
 
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }
+//     @-moz-keyframes #{$animation-name} {
+//         @content;
+//     }
 
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
+//     @-ms-keyframes #{$animation-name} {
+//         @content;
+//     }
 
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }
+//     @-o-keyframes #{$animation-name} {
+//         @content;
+//     }
 
-    @keyframes #{$animation-name} {
-        @content;
-    }
-}
+//     @keyframes #{$animation-name} {
+//         @content;
+//     }
+// }
 
-@mixin animation($str) {
-    -webkit-animation: #{$str};
-    -moz-animation: #{$str};
-    -ms-animation: #{$str};
-    -o-animation: #{$str};
-    animation: #{$str};
-}
+// @mixin animation($str) {
+//     -webkit-animation: #{$str};
+//     -moz-animation: #{$str};
+//     -ms-animation: #{$str};
+//     -o-animation: #{$str};
+//     animation: #{$str};
+// }
 
-@include keyframes(slide-left) {
-    0% {
-        left: -100%;
-    }
+// @include keyframes(slide-left) {
+//     0% {
+//         left: -100%;
+//     }
 
-    100% {
-        left: 0;
-    }
-}
+//     100% {
+//         left: 0;
+//     }
+// }
 
 .experience {
-    position: absolute;
-    left: 0;
-    min-height: calc(100vh - #{$navbarheight});
-    width: 100%;
-    // margin-left: $navbarwidth;
-    margin-top: $navbarheight;
-    padding: 1rem 0;
-    background-color: $background;
-    // @include animation('slide-left 0.8s 1');
+  padding: calc(#{$navbarheight} + 0rem) 2rem 2rem 2rem;
+  background-color: $background;
+  min-height: calc(100vh - #{$navbarheight});
+  margin-top: $navbarheight;
+  //   position: absolute;
+  //   left: 0;
+  //   width: 100%;
+  // margin-left: $navbarwidth;
+  //   padding: 1rem 0;
+  // @include animation('slide-left 0.8s 1');
 
-    .wrapper {
-        max-width: 1080px;
-        margin: 20px auto;
-        padding: 0 20px;
-        position: relative;
+  .wrapper {
+    max-width: 1080px;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+    position: relative;
 
-        .eduOpen {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            color: $white;
-            // background: $primary;
-            border-radius: 10px;
-            width: fit-content;
-            padding: 8px 10px;
-            font-family: 'Ubuntu Mono', monospace;
-            letter-spacing: 0.5px;
-        }
-
-        .eduClose {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-top: 3rem;
-            color: $white;
-            // background: $primary;
-            border-radius: 10px;
-            width: fit-content;
-            padding: 8px 10px;
-            font-family: 'Ubuntu Mono', monospace;
-            letter-spacing: 0.5px;
-        }
-
-        .center_line {
-            position: absolute;
-            height: 75%;
-            width: 4px;
-            background: $primary;
-            left: 50%;
-            top: 60px;
-            border-radius: 2px;
-            transform: translateX(-50%);
-        }
+    .header {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: $text;
+      width: fit-content;
+      //   padding: 8px 10px;
     }
+  }
 }
 
-@media (max-width: 790px) {
-    .wrapper {
-        .center_line {
-            left: 40px !important;
-        }
+@media (max-width: 768px) {
+  .experience {
+    padding: calc(#{$navbarheight} + 0rem) 1.2rem 2rem 1.2rem;
+  }
+
+  .wrapper {
+    padding: 0 10px;
+
+    .header {
+      font-size: 1.3rem;
+      // text-align: center;
     }
+  }
 }
 
-@media (max-width: 440px) {
-    .wrapper {
-        .center_line {
-            display: none;
-        }
+@media (max-width: 500px) {
+  .experience {
+    padding: calc(#{$navbarheight} + 0rem) 1rem 1.5rem 1rem;
+  }
+
+  .wrapper {
+    padding: 0 8px;
+
+    .header {
+      font-size: 1.1rem;
+      // text-align: center;
     }
+  }
 }

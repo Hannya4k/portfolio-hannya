@@ -10,12 +10,22 @@ export const Experience: ExperienceType[] = [
   {
     title: "Cybersecurity Intern",
     subtitle: "Tech Advise Solutions and Services - Davao City, Philippines",
-    website: "techadviseph.com",
+    website: "https://techadviseph.com/",
     date: "May 2025 - Present",
     content: {
       text: " ",
-      list: ["Learn and Study how LMNTRIX works."],
-      tech: ["LMNTRIX", "Blue Team"],
+      list: [
+        "Conducted vulnerability assessment using Nessus and performed penetration testing on a website.",
+        "Create an EC2 instance and a security group using Terraform.",
+      ],
+      tech: [
+        "Red Team",
+        "Cybersecurity",
+        "Ethical Hacking",
+        "Penetration Testing",
+        "IaC",
+        "Terraform",
+      ],
     },
   },
   {
@@ -50,7 +60,7 @@ export const Experience: ExperienceType[] = [
     // website: ' ',
     date: "January 2024 - November 2024",
     content: {
-      text: " ",
+      text: "",
       list: [
         "Helped debug issues and implemented requested features.",
         "Developed the new Comcare website using Next.js.",

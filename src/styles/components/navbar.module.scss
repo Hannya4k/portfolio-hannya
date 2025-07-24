@@ -1,135 +1,159 @@
-@use'../colors' as *;
-@use '../values' as *;
+@use "../colors" as *;
+@use "../values" as *;
+@use "../fonts" as fonts;
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: $navbarheight;
-    width: 100%;
-    padding: 0 3vw;
-    // background-color: #dbecff;
-    background: $primary;
-    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // border-bottom: 2px solid #000000e7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $navbarheight;
+  width: 100%;
+  padding: 0 3vw;
+  background: $primary;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    .logo {
-        font-size: 2rem;
-        letter-spacing: 0.01vw;
-        cursor: pointer;
-        color: $white;
-        transition: all 0.3s ease;
+  .logo {
+    font-size: 1.5rem;
+    letter-spacing: 0.01vw;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.3s ease;
+  }
+  .typing {
+    font-family: fonts.$font-mono;
+    position: relative;
+  }
+
+  .typing::after {
+    content: "";
+    display: inline-block;
+    width: 0.5ch;
+    height: 1em;
+    background: currentColor;
+    margin-left: 1px;
+    animation: blink 0.8s steps(1) infinite;
+    vertical-align: bottom;
+  }
+
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
     }
 
-    .desktopitems {
-        .link {
-            text-decoration: none;
-            padding: 0.5vw 0.7vw;
-            margin: 0 0.5vw;
-            transition: 0.5s all ease-in-out;
-            color: $white;
-            font-size: 1.3rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            transition: 0.3s all ease-in-out;
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+  .desktopitems {
+    .link {
+      text-decoration: none;
+      padding: 0.5vw 0.7vw;
+      margin: 0 0.5vw;
+      transition: 0.5s all ease-in-out;
+      color: $text;
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      transition: 0.3s all ease-in-out;
 
-            &:hover {
-                background-color: rgba(68, 68, 68, 0.2);
-            }
+      &:hover {
+        background-color: rgba(68, 68, 68, 0.2);
+      }
 
-            &.btncv {
-                background-color: #DC5F00;
-                color: #fff;
+      //   &.btncv {
+      //     background-color: #dc5f00;
+      //     color: #fff;
 
-                &:hover {
-                    background-color: #fb8c38;
-                }
-            }
-        }
+      //     &:hover {
+      //       background-color: #fb8c38;
+      //     }
+      //   }
+    }
+  }
+
+  .mobileview {
+    .mobilemenu {
+      position: absolute;
+      right: 3vw;
+      top: 12.9px;
+      // background-color: rgba(0, 0, 0, 0.06);
+      padding: 6px 7px 4px 7px;
+      border-radius: 10px;
+      cursor: pointer;
+      transform: scale(1);
+      transition: 0.3s all ease-in-out;
+
+      // &:hover {
+      //   background-color: rgba(0, 0, 0, 0.08);
+      // }
     }
 
-    .mobileview {
-        .mobilemenu {
-            position: absolute;
-            right: 3vw;
-            top: 12.9px;
-            // background-color: rgba(0, 0, 0, 0.06);
-            padding: 6px 7px 4px 7px;
-            border-radius: 10px;
-            cursor: pointer;
-            transform: scale(1);
-            transition: 0.3s all ease-in-out;
-
-            // &:hover {
-            //   background-color: rgba(0, 0, 0, 0.08);
-            // }
-        }
-
-        .active {
-            transform: scale(0);
-            transition: 0.3s all ease-in-out;
-        }
+    .active {
+      transform: scale(0);
+      transition: 0.3s all ease-in-out;
     }
+  }
 }
 
 .mobileMenuModal {
-    position: fixed;
-    background-color: $primary;
-    left: 0;
-    top: 0;
-    width: 100%;
-    min-height: 100vh;
-    z-index: 5;
-    transform: translateY(-100%);
-    transition: 0.4s all ease-in-out;
+  position: fixed;
+  background-color: $primary;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 5;
+  transform: translateY(-100%);
+  transition: 0.4s all ease-in-out;
 
-    padding: calc(#{$navbarheight} + 3rem) 0 3rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  padding: calc(#{$navbarheight} + 3rem) 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-    @media (min-width: 850px) {
-        display: none;
-    }
+  @media (min-width: 850px) {
+    display: none;
+  }
 
-    .mobileLinks {
-        text-decoration: none;
-        padding: 10px;
-        color: $white;
-        font-size: 1.6rem;
-        font-weight: 500;
-        letter-spacing: 1px;
+  .mobileLinks {
+    text-decoration: none;
+    padding: 10px;
+    color: $text;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
 
-        &.mobileBtncv {
-            background-color: #DC5F00;
-            color: #fff;
+    // &.mobileBtncv {
+    //   background-color: #dc5f00;
+    //   color: #fff;
 
-            &:hover {
-                background-color: #fb8c38;
-            }
-        }
-    }
+    //   &:hover {
+    //     background-color: #fb8c38;
+    //   }
+    // }
+  }
 }
 
 .active {
-    transform: translateY(0);
-    transition: 0.4s all ease-in-out;
+  transform: translateY(0);
+  transition: 0.4s all ease-in-out;
 }
 
 @media (max-width: 850px) {
-    .desktopitems {
-        display: none;
-    }
+  .desktopitems {
+    display: none;
+  }
 }
 
 @media (min-width: 850px) {
-    .mobileview {
-        display: none;
-    }
+  .mobileview {
+    display: none;
+  }
 }

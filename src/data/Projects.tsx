@@ -15,11 +15,11 @@ export const Projects: ProjectsType[] = [
   {
     title: "Portfolio",
     description: "My personal portfolio website.",
-    image: "https://i.imgur.com/iLzO2eX.png",
+    image: "https://imgur.com/sjjdaMd.png",
     GitHub: " ",
   },
   {
-    title: "Comcare Insurance Agency Website",
+    title: "Comcare Website",
     description: "An insurance system for Comcare.",
     image: "https://i.imgur.com/iKnAVvZ.png",
     GitHub: "",
@@ -37,17 +37,9 @@ export const Projects: ProjectsType[] = [
     image: "https://imgur.com/aJdG4ZA.png",
     GitHub: "",
   },
-  // {
-  //   title: "ACS Tablet",
-  //   description:
-  //     "ACS is a website and one of the main products of Aquila Softwares. I am converting it into a tablet version for easy access by doctors.",
-  //   image: "https://imgur.com/C1nSYpv.png",
-  //   GitHub: "",
-  // },
   {
     title: "ChatterBox",
-    description:
-      "A chat application that allows users to create chat rooms and chat with other users.",
+    description: "A chat app for creating rooms and messaging users.",
     image: "https://i.imgur.com/ptoo806.png",
     GitHub: " ",
   },

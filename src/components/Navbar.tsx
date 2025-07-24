@@ -21,7 +21,7 @@ const Navbar = () => {
     <>
       <div className={styles.navbar}>
         <h2 className={styles.logo} onClick={handleLogoClick}>
-          {"Karl</>"}
+          <span className={styles.typing}>&gt; hannya </span>
         </h2>
         <div className={styles.desktopitems}>
           {NavLinks.map((link) => (
@@ -41,14 +41,14 @@ const Navbar = () => {
               {link.title}
             </NavLink>
           ))}
-          <a
+          {/* <a
             target="_blank"
             className={`${styles.btncv} ${styles.link}`}
             href={Contact.cv}
             rel="noreferrer"
           >
-            Download CV
-          </a>
+            [Download CV]
+          </a> */}
         </div>
         <div className={styles.mobileview}>
           <div
@@ -99,14 +99,14 @@ const Navbar = () => {
             {link.title}
           </NavLink>
         ))}
-        <a
+        {/* <a
           target="_blank"
           className={`${styles.mobileBtncv} ${styles.mobileLinks}`}
           href={Contact.cv}
           rel="noreferrer"
         >
           Download CV
-        </a>
+        </a> */}
       </div>
     </>
   );

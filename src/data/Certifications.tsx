@@ -12,4 +12,8 @@ export const Certifications: CertificationsType[] = [
     title: "Web Development",
     image: "https://i.imgur.com/mcOVcxV.png",
   },
+  {
+    title: "Cybersecurity",
+    image: "https://imgur.com/uysGECG.png",
+  },
 ];

@@ -1,0 +1,228 @@
+@use "../colors" as *;
+@use "../values" as *;
+
+.about {
+  min-height: 100vh;
+  padding: calc(#{$navbarheight} + 0rem) 2rem 2rem 2rem;
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .header {
+    width: 60%;
+    font-size: 1.5rem;
+    color: $text;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+  .name {
+    padding: 10px 10px 0px 10px;
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-align: left;
+    color: $text;
+  }
+  .location {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.1em;
+    padding: 0 10px 0 10px;
+    font-weight: 400;
+  }
+  .description {
+    font-size: 1.3rem;
+    padding: 0 10px 0 10px;
+    color: $text;
+    margin: 1rem 0;
+    text-align: justify;
+    font-weight: 500;
+  }
+  .about_container {
+    width: 60%;
+    color: $text;
+    border: 1px solid $text;
+    border-radius: 10px;
+  }
+  .linksWrapper {
+    width: 60%;
+    padding: 10px 0px;
+    overflow: hidden;
+    position: relative;
+    color: $text;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: max-content;
+    animation: scrollX 25s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    a {
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      font-size: 3rem;
+      &:hover {
+        border-radius: 50px;
+        background: $primary;
+        box-shadow: 0 0 6px rgba(167, 167, 167, 0.6);
+      }
+      svg {
+        transition: all 1.2s ease;
+      }
+
+      &:hover svg {
+        transform: rotateY(1turn);
+      }
+    }
+  }
+
+  @keyframes scrollX {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .linksFade {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 60px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, #292a2c, transparent);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #292a2c, transparent);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    padding: calc(#{$navbarheight} + 0rem) 1rem;
+
+    .header {
+      width: 100%;
+      font-size: 1.2rem;
+      text-align: left;
+    }
+    .name {
+      font-size: 1.8rem;
+      text-align: left;
+    }
+
+    .location {
+      font-size: 1rem;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      padding: 0;
+      text-align: justify;
+    }
+
+    .about_container {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .linksWrapper {
+      width: 100%;
+    }
+
+    .links {
+      gap: 1rem;
+      a {
+        font-size: 2.2rem;
+        padding: 8px;
+      }
+    }
+
+    .image {
+      height: 7rem;
+      width: 7rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    padding: calc(#{$navbarheight} + 1rem) 1.5rem;
+
+    .header {
+      width: 100%;
+      font-size: 1.3rem;
+      text-align: left;
+      padding-bottom: 20px;
+    }
+
+    .name {
+      font-size: 2.2rem;
+      text-align: left;
+    }
+
+    .location {
+      font-size: 1rem;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      padding: 0 5px;
+      text-align: justify;
+    }
+
+    .about_container {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .linksWrapper {
+      width: 100%;
+    }
+
+    .links {
+      gap: 1.2rem;
+
+      a {
+        font-size: 2.6rem;
+        padding: 10px;
+      }
+    }
+
+    .linksFade::before,
+    .linksFade::after {
+      width: 40px;
+    }
+  }
+}
