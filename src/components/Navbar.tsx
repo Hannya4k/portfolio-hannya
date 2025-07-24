@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { NavLink, useNavigate } from "react-router-dom";
-import { NavLinks, Contact } from "../data";
+import { NavLinks } from "../data";
 
 import styles from "../styles/components/navbar.module.scss";
 

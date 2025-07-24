@@ -6,7 +6,7 @@ function randomChar() {
   return chars[Math.floor(Math.random() * chars.length)];
 }
 
-function shouldScramble(wordIndex: number, totalWords: number): boolean {
+function shouldScramble(_wordIndex: number, _totalWords: number): boolean {
   // Scramble roughly 30% of the words randomly
   return Math.random() < 0.3;
 }
@@ -24,7 +24,7 @@ export const useScramble = (target: string, speed = 50, delay = 30) => {
     const maxFrames = Math.max(...words.map(w => w.length)) * 3;
 
     const interval = setInterval(() => {
-      scrambledWords.forEach((word, i) => {
+      scrambledWords.forEach((_word, i) => {
         if (!scrambleMap[i]) return;
 
         const original = originalWords[i];
