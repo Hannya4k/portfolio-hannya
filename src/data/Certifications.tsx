@@ -9,7 +9,7 @@ export const Certifications: CertificationsType[] = [
     image: "https://i.imgur.com/DhbwdlX.png",
   },
   {
-    title: "Web Development",
+    title: "HTML & CSS",
     image: "https://i.imgur.com/mcOVcxV.png",
   },
   {

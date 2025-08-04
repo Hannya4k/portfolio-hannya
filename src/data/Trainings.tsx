@@ -5,6 +5,10 @@ interface TrainingsType {
 
 export const Trainings: TrainingsType[] = [
   {
+    title: "AIG Shields Up: Cybersecurity virtual experience program on Forage",
+    image: "https://imgur.com/wVpLZYt.jpg",
+  },
+  {
     title: "Blue Team Junior Analyst (BTJA) training pathway",
     image: "https://imgur.com/u9u003J.png",
   },
