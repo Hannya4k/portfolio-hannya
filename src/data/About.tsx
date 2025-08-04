@@ -11,7 +11,7 @@ export const About: AboutType = {
   firstName: "Karl",
   lastName: "Andoque",
   hackername: "h4NNY4",
-  about: "Cybersecurity Enthusiast | VAPT Engineer | Bug Bounty Hunter",
+  about: "Cybersecurity Enthusiast | VAPT Engineer | Software Engineer",
   description:
     "VAPT Engineer with exposure to vulnerability assessment and penetration testing, learning how to identify and reduce system vulnerabilities.",
   offer:
