@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { Contact, Links } from "../data";
 import styles from "../styles/pages/contact.module.scss";
 import { useScramble } from "../hooks/useScramble";
-import { WEB3FORMS_ACCESS_KEY } from "../config/web3forms";
+
 
 const ContactPage = () => {
   const header = useScramble("> whoami --contact", 100, 100);
@@ -25,7 +25,7 @@ const ContactPage = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
           name,
           email: fromEmail,
           message,
