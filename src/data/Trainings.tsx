@@ -5,6 +5,14 @@ interface TrainingsType {
 
 export const Trainings: TrainingsType[] = [
   {
+    title: "GEMweb Plus 500 IT Training - SEA",
+    image: "https://imgur.com/bHW4wlI.jpg",
+  },
+  {
+    title: "HemoHub IT Training - SEA",
+    image: "https://imgur.com/3Ax7gzm.jpg",
+  },
+  {
     title: "AIG Shields Up: Cybersecurity virtual experience program on Forage",
     image: "https://imgur.com/wVpLZYt.jpg",
   },
@@ -25,7 +33,7 @@ export const Trainings: TrainingsType[] = [
     image: "https://i.imgur.com/OUmYRDX.png",
   },
   {
-    title: "Fronted: HTML, CSS, JavaScript and React",
+    title: "Frontend: HTML, CSS, JavaScript and React",
     image: "https://i.imgur.com/HrVHZTu.png",
   },
   {

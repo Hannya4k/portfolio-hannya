@@ -7,6 +7,30 @@ export interface ExperienceType {
 }
 
 export const Experience: ExperienceType[] = [
+    {
+    title: "IT Officer",
+    subtitle: "Biosite Medical Instruments - Davao City, Philippines",
+    website: "https://biositeph.com/",
+    date: "August 2025 - Present",
+    content: {
+      text: " ",
+      list: [
+        "Administered Google Workspace as primary administrator, managing user provisioning and deprovisioning, account updates, and access permissions across the organization.",
+        "Designed and developed a modern landing page and admin system using Next.js, Node.js, and PostgreSQL, delivering scalable backend services.",
+        "Rebuilt and enhanced the company's internal website with React.js, improving usability, performance, and overall user experience.",
+        "Served as primary IT administrator for the Zoho One ecosystem, handling system setup, configuration, maintenance, and end-user support.",
+        "Delivered technical support by troubleshooting network, printer, hardware, and software issues, resolving employee IT concerns efficiently."
+      ],
+      tech: [
+        "Networking",
+        "IT Support",
+        "Zoho One",
+        "GEMweb Plus 500",
+        "HemoHub",
+        "Software Engineering",
+      ],
+    },
+  },
   {
     title: "Cybersecurity Intern",
     subtitle: "Tech Advise Solutions and Services - Davao City, Philippines",

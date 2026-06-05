@@ -1,9 +1,8 @@
 import { FC } from "react";
-import { FaGlobe } from "react-icons/fa";
 import { ExperienceType } from "../../data/Experience";
 import styles from "../../styles/components/experienceCard.module.scss";
-import { LinkButton } from "../LinkButton";
 import { useScramble } from "../../hooks/useScramble";
+
 interface ExperienceCardProps extends ExperienceType {
   scrambleDelay?: number;
 }
@@ -14,10 +13,22 @@ const ExperienceCard: FC<ExperienceCardProps> = (props) => {
   return (
     <div className={styles.expcard}>
       <section>
-        <div className={styles.details}>
+        <div className={styles.card_header}>
           <p className={styles.title}>{title}</p>
-          <p className={styles.subtitle}>{subtitle}</p>
           <p className={styles.date}>{props.date}</p>
+        </div>
+        <div className={styles.meta}>
+          <p className={styles.subtitle}>{subtitle}</p>
+          {props.website && (
+            <a
+              href={props.website}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.visit}
+            >
+              Visit ↗
+            </a>
+          )}
         </div>
         {props.content.list.length > 0 && (
           <ul>
@@ -26,24 +37,10 @@ const ExperienceCard: FC<ExperienceCardProps> = (props) => {
             ))}
           </ul>
         )}
-
-        <div className={styles.buttons}>
-          {props.website && (
-            <>
-              <LinkButton
-                style={{ paddingBottom: 1 }}
-                icon={<FaGlobe style={{ marginBottom: -2 }} />}
-                label={"Visit"}
-                className={styles.hosted}
-                link={props.website}
-              />
-            </>
-          )}
-        </div>
         {props.content.tech.length > 0 && (
           <div className={styles.badges}>
             {props.content.tech.map((item) => (
-              <span key={item}>{`${item}`}</span>
+              <span key={item}>{item}</span>
             ))}
           </div>
         )}

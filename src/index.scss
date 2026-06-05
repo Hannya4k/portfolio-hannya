@@ -5,6 +5,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: $primary transparent;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,6 +18,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Webkit scrollbar (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -21,4 +28,19 @@ body {
 ::-webkit-scrollbar-thumb {
   background: $primary;
   border-radius: 4px;
+}
+
+/* Respect user reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

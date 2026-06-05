@@ -1,134 +1,124 @@
 @use "../colors" as *;
 
 .expcard {
-  display: flex;
-  justify-content: center;
-
   section {
     border-radius: 10px;
-    width: 90%;
-    padding: 20px;
+    width: 100%;
+    padding: 1.4rem 1.6rem;
     position: relative;
-    background-color: $primary;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    transition: 0.3s all linear;
-    margin-bottom: 20px;
+    transition: 0.3s border-color ease, 0.3s box-shadow ease;
+    margin-bottom: 1.2rem;
+
     &:hover {
-      box-shadow: 0 0 6px rgba(167, 167, 167, 0.6);
+      border-color: rgba(74, 222, 128, 0.3);
+      box-shadow: 0 0 12px rgba(74, 222, 128, 0.1);
     }
+  }
 
-    .details {
-      .title {
-        font-size: 24px;
-        font-weight: 800;
-        color: $text;
-      }
+  .card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
 
-      .subtitle {
-        font-style: italic;
-        font-size: 18px;
-        font-weight: 400;
-      }
+  .title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: $text;
+    margin: 0;
+  }
 
-      .date {
-        color: $text;
-        font-size: 14px;
-        font-weight: 400;
-      }
+  .date {
+    font-size: 0.85rem;
+    color: $accent;
+    white-space: nowrap;
+    margin: 0;
+    padding-top: 0.25rem;
+    flex-shrink: 0;
+  }
 
-      & p {
-        margin: 0;
-      }
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0.3rem 0 1rem 0;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .subtitle {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: rgba(248, 248, 255, 0.55);
+    margin: 0;
+    flex: 1;
+  }
+
+  .visit {
+    font-size: 0.82rem;
+    color: $accent;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(74, 222, 128, 0.5);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: 0.2s opacity ease;
+
+    &:hover {
+      opacity: 0.7;
     }
+  }
 
-    .buttons {
-      margin: 20px 0 10px 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-      .hosted {
-        text-decoration: none;
-        font-size: 1rem;
-        color: $text;
-        border-bottom: 2px solid #b8b8b8;
-      }
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      padding-top: 20px;
-
-      span {
-        border-radius: 5px;
-        font-size: 0.8rem;
-        color: #fff;
-        padding: 4px;
-        // margin-top: 5px;
-        margin-right: 5px;
-        // background-color: #828181;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      }
-    }
-
-    ul {
-      list-style: none;
-      margin-left: 0;
-      padding-left: 0;
-
-      li {
-        padding-left: 1em;
-        text-indent: -1em;
-      }
-
-      li::before {
-        content: ">";
-        padding-right: 5px;
-      }
-    }
-
-    p,
     li {
-      margin: 10px 0;
-      font-size: 18px;
-      line-height: 1.4;
-      letter-spacing: 0.2px;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+      font-size: 0.95rem;
+      line-height: 1.65;
       color: $text;
+      margin: 0.35rem 0;
+    }
+
+    li::before {
+      content: ">";
+      padding-right: 0.4em;
+      color: $accent;
+    }
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+    span {
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: $accent;
+      padding: 3px 8px;
+      border: 1px solid rgba(74, 222, 128, 0.35);
+      background: rgba(74, 222, 128, 0.05);
     }
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1024px) {
   .expcard {
     section {
-      width: 100%;
-      padding: 10px;
-
-      .details {
-        .title {
-          font-size: 1.2rem;
-        }
-
-        .subtitle {
-          font-size: 1rem;
-        }
-
-        .date {
-          font-size: 0.9rem;
-        }
-      }
-
-      .badges span {
-        font-size: 0.7rem;
-        padding: 3px 5px;
-      }
-
-      p,
-      li {
-        font-size: 0.95rem;
-      }
-
-      .buttons .hosted {
-        font-size: 0.9rem;
-      }
+      padding: 1.2rem 1.4rem;
     }
   }
 }
@@ -136,34 +126,40 @@
 @media (max-width: 768px) {
   .expcard {
     section {
-      padding: 15px;
+      padding: 1rem 1.2rem;
+    }
 
-      .details {
-        .title {
-          font-size: 1.5rem;
-        }
+    .title {
+      font-size: 1.15rem;
+    }
 
-        .subtitle {
-          font-size: 1.2rem;
-        }
+    .subtitle {
+      font-size: 0.85rem;
+    }
+  }
+}
 
-        .date {
-          font-size: 1rem;
-        }
-      }
+@media (max-width: 480px) {
+  .expcard {
+    section {
+      padding: 0.9rem 1rem;
+    }
 
-      .badges span {
-        font-size: 0.75rem;
-      }
+    .card_header {
+      flex-direction: column;
+      gap: 0.15rem;
+    }
 
-      p,
-      li {
-        font-size: 1rem;
-      }
+    .title {
+      font-size: 1.05rem;
+    }
 
-      .buttons .hosted {
-        font-size: 0.95rem;
-      }
+    .date {
+      padding-top: 0;
+    }
+
+    ul li {
+      font-size: 0.88rem;
     }
   }
 }

@@ -4,32 +4,9 @@ interface NavLinkType {
 }
 
 export const NavLinks: NavLinkType[] = [
-  // {
-  //   title: "~/home",
-  //   linkTo: "/",
-  // },
-  {
-    title: "~/about",
-    linkTo: "/about",
-  },
-  // {
-  //   title: "~/skills",
-  //   linkTo: "/skills",
-  // },
-  {
-    title: "~/experience",
-    linkTo: "/experience",
-  },
-  {
-    title: "~/projects",
-    linkTo: "/projects",
-  },
-  {
-    title: "~/certifications",
-    linkTo: "/certificates",
-  },
-  {
-    title: "~/contact",
-    linkTo: "/contact",
-  },
+  { title: "~/about", linkTo: "#about" },
+  { title: "~/experience", linkTo: "#experience" },
+  { title: "~/projects", linkTo: "#projects" },
+  { title: "~/certifications", linkTo: "#certificates" },
+  { title: "~/contact", linkTo: "#contact" },
 ];

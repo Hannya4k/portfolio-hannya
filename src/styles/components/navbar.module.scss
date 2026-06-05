@@ -21,7 +21,12 @@
     cursor: pointer;
     color: $text;
     transition: all 0.3s ease;
+
+    &:hover {
+      color: $accent;
+    }
   }
+
   .typing {
     font-family: fonts.$font-mono;
     position: relative;
@@ -43,60 +48,85 @@
     50% {
       opacity: 1;
     }
-
     51%,
     100% {
       opacity: 0;
     }
   }
+
   .desktopitems {
+    display: flex;
+    align-items: center;
+
     .link {
       text-decoration: none;
       padding: 0.5vw 0.7vw;
-      margin: 0 0.5vw;
-      transition: 0.5s all ease-in-out;
+      margin: 0 0.3vw;
       color: $text;
       font-size: 1.1rem;
       font-weight: 500;
       letter-spacing: 1px;
       border-radius: 4px;
-      transition: 0.3s all ease-in-out;
+      transition: 0.3s color ease-in-out;
+      position: relative;
 
       &:hover {
-        background-color: rgba(68, 68, 68, 0.2);
+        color: $accent;
       }
+    }
 
-      //   &.btncv {
-      //     background-color: #dc5f00;
-      //     color: #fff;
+    .activeLink {
+      color: $accent;
+    }
 
-      //     &:hover {
-      //       background-color: #fb8c38;
-      //     }
-      //   }
+    .navIndicator {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: $accent;
+      border-radius: 1px;
+    }
+
+    .btncv {
+      color: $accent;
+      border: 1px solid $accent;
+      padding: 0.3vw 0.7vw;
+      border-radius: 4px;
+      margin-left: 0.5vw;
+
+      &:hover {
+        background-color: rgba(74, 222, 128, 0.1);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
     }
   }
 
   .mobileview {
+    display: none;
+
     .mobilemenu {
       position: absolute;
       right: 3vw;
       top: 12.9px;
-      // background-color: rgba(0, 0, 0, 0.06);
       padding: 6px 7px 4px 7px;
       border-radius: 10px;
       cursor: pointer;
       transform: scale(1);
       transition: 0.3s all ease-in-out;
-
-      // &:hover {
-      //   background-color: rgba(0, 0, 0, 0.08);
-      // }
     }
 
     .active {
       transform: scale(0);
       transition: 0.3s all ease-in-out;
+    }
+
+    @media (max-width: 1024px) {
+      display: block;
     }
   }
 }
@@ -111,14 +141,13 @@
   z-index: 5;
   transform: translateY(-100%);
   transition: 0.4s all ease-in-out;
-
   padding: calc(#{$navbarheight} + 3rem) 0 3rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 
-  @media (min-width: 850px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 
@@ -129,15 +158,22 @@
     font-size: 1.6rem;
     font-weight: 500;
     letter-spacing: 1px;
+    transition: 0.2s color ease;
+  }
 
-    // &.mobileBtncv {
-    //   background-color: #dc5f00;
-    //   color: #fff;
+  .activeMobileLink {
+    color: $accent;
+  }
 
-    //   &:hover {
-    //     background-color: #fb8c38;
-    //   }
-    // }
+  .mobileBtncv {
+    color: $accent;
+    border: 1px solid $accent;
+    border-radius: 4px;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: rgba(74, 222, 128, 0.1);
+    }
   }
 }
 
@@ -146,14 +182,3 @@
   transition: 0.4s all ease-in-out;
 }
 
-@media (max-width: 850px) {
-  .desktopitems {
-    display: none;
-  }
-}
-
-@media (min-width: 850px) {
-  .mobileview {
-    display: none;
-  }
-}

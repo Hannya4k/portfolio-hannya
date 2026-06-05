@@ -1,0 +1,213 @@
+@use "../colors" as *;
+@use "../values" as *;
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.skeleton {
+  min-height: 100vh;
+  background-color: $background;
+  animation: fadeIn 0.3s ease;
+  overflow: hidden;
+}
+
+.block {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 25%,
+    rgba(74, 222, 128, 0.09) 50%,
+    rgba(255, 255, 255, 0.04) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+  border-radius: 6px;
+}
+
+// --- Navbar ---
+.skeletonNav {
+  height: $navbarheight;
+  background: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+}
+
+.navLogo {
+  width: 120px;
+  height: 20px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.navLink {
+  width: 70px;
+  height: 16px;
+}
+
+// --- Hero ---
+.hero {
+  min-height: calc(100vh - #{$navbarheight});
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 4rem 2rem;
+  background-color: $background;
+}
+
+.avatar {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  max-width: 480px;
+}
+
+.heroTitle {
+  height: 2.8rem;
+  width: 70%;
+  border-radius: 8px;
+}
+
+.heroSubtitle {
+  height: 1.4rem;
+  width: 50%;
+}
+
+.heroIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.heroIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 6px;
+}
+
+// --- Sections ---
+.section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  &:nth-child(even) {
+    background-color: $background-alt;
+    max-width: 100%;
+    padding: 4rem 2rem;
+
+    > * {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.sectionHeader {
+  height: 1.4rem;
+  width: 220px;
+  margin-bottom: 2rem;
+}
+
+// --- About ---
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.colLines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.lineWide  { height: 14px; width: 100%; }
+.lineMed   { height: 14px; width: 75%; }
+.lineShort { height: 14px; width: 50%; }
+
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7rem;
+}
+
+.skillItem {
+  height: 64px;
+  border-radius: 8px;
+}
+
+// --- Experience ---
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-left: 2rem;
+}
+
+.expCard {
+  height: 130px;
+  border-radius: 10px;
+}
+
+// --- Projects ---
+.featuredCard {
+  height: 300px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.projectCard {
+  height: 240px;
+  border-radius: 12px;
+}
+
+// --- Responsive ---
+@media (max-width: 1024px) {
+  .hero { gap: 2rem; }
+  .projectGrid { grid-template-columns: repeat(2, 1fr); }
+  .twoCol { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .avatar { width: 10rem; height: 10rem; }
+  .heroTitle { width: 90%; }
+  .heroSubtitle { width: 70%; }
+  .navLinks { display: none; }
+}
+
+@media (max-width: 480px) {
+  .projectGrid { grid-template-columns: 1fr; }
+  .skillGrid { grid-template-columns: repeat(3, 1fr); }
+  .featuredCard { height: 200px; }
+}

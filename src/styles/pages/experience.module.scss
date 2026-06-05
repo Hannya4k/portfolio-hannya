@@ -1,100 +1,97 @@
 @use "../colors" as *;
 @use "../values" as *;
 
-// @mixin keyframes($animation-name) {
-//     @-webkit-keyframes #{$animation-name} {
-//         @content;
-//     }
-
-//     @-moz-keyframes #{$animation-name} {
-//         @content;
-//     }
-
-//     @-ms-keyframes #{$animation-name} {
-//         @content;
-//     }
-
-//     @-o-keyframes #{$animation-name} {
-//         @content;
-//     }
-
-//     @keyframes #{$animation-name} {
-//         @content;
-//     }
-// }
-
-// @mixin animation($str) {
-//     -webkit-animation: #{$str};
-//     -moz-animation: #{$str};
-//     -ms-animation: #{$str};
-//     -o-animation: #{$str};
-//     animation: #{$str};
-// }
-
-// @include keyframes(slide-left) {
-//     0% {
-//         left: -100%;
-//     }
-
-//     100% {
-//         left: 0;
-//     }
-// }
-
 .experience {
-  padding: calc(#{$navbarheight} + 0rem) 2rem 2rem 2rem;
+  padding: 4rem 2rem;
   background-color: $background;
-  min-height: calc(100vh - #{$navbarheight});
-  margin-top: $navbarheight;
-  //   position: absolute;
-  //   left: 0;
-  //   width: 100%;
-  // margin-left: $navbarwidth;
-  //   padding: 1rem 0;
-  // @include animation('slide-left 0.8s 1');
+  min-height: 100vh;
+  scroll-margin-top: $navbarheight;
 
   .wrapper {
-    max-width: 1080px;
-    margin: 0 auto 20px auto;
-    padding: 0 20px;
+    max-width: 1100px;
+    margin: 0 auto;
     position: relative;
 
     .header {
       font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: $text;
+      margin-bottom: 2rem;
+      color: $accent;
       width: fit-content;
-      //   padding: 8px 10px;
     }
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0.4rem;
+      top: 2rem;
+      bottom: 2rem;
+      width: 2px;
+      background: linear-gradient(to bottom, $accent, rgba(74, 222, 128, 0.05));
+    }
+  }
+
+  .timeline_item {
+    position: relative;
+  }
+
+  .timeline_dot {
+    position: absolute;
+    left: -1.65rem;
+    top: 1.8rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $accent;
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .experience {
+    padding: 4rem 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
   .experience {
-    padding: calc(#{$navbarheight} + 0rem) 1.2rem 2rem 1.2rem;
+    padding: 4rem 1.5rem;
   }
 
   .wrapper {
-    padding: 0 10px;
-
     .header {
       font-size: 1.3rem;
-      // text-align: center;
     }
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .experience {
-    padding: calc(#{$navbarheight} + 0rem) 1rem 1.5rem 1rem;
+    padding: 4rem 1rem;
   }
 
   .wrapper {
-    padding: 0 8px;
-
     .header {
       font-size: 1.1rem;
-      // text-align: center;
+    }
+  }
+
+  .timeline {
+    padding-left: 1.2rem;
+
+    .timeline_dot {
+      left: -1.35rem;
+      width: 8px;
+      height: 8px;
     }
   }
 }

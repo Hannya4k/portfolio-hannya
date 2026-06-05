@@ -1,4 +1,6 @@
 import React, { useState, useEffect, ReactNode, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Skeleton from "./Skeleton";
 import styles from "../styles/components/loader.module.scss";
 
 interface LoaderProps {
@@ -57,8 +59,10 @@ const loadingLines: string[] = [
   "hannya@root:~#",
 ];
 
+type Phase = "terminal" | "skeleton" | "done";
+
 const Loader: React.FC<LoaderProps> = ({ children }) => {
-  const [showLoader, setShowLoader] = useState(true);
+  const [phase, setPhase] = useState<Phase>("terminal");
   const [typedLines, setTypedLines] = useState<string[]>([]);
   const [currentLine, setCurrentLine] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -87,8 +91,8 @@ const Loader: React.FC<LoaderProps> = ({ children }) => {
       } else {
         clearInterval(typeInterval);
         setTimeout(() => {
-          setShowLoader(false);
-          //   localStorage.setItem("hasLoaded", "true");
+          setPhase("skeleton");
+          setTimeout(() => setPhase("done"), 1400);
         }, 800);
       }
     }, 10); // speed of each character
@@ -96,22 +100,50 @@ const Loader: React.FC<LoaderProps> = ({ children }) => {
     return () => clearInterval(typeInterval);
   }, [charIndex, currentLine, typedLines]);
 
-  if (showLoader) {
-    return (
-      <div className={styles.loader} ref={loaderRef}>
-        <pre>
-          {asciiArt.map((line, idx) => (
-            <div key={`ascii-${idx}`}>{line}</div>
-          ))}
-          {typedLines.map((line, idx) => (
-            <div key={`typed-${idx}`}>{line}</div>
-          ))}
-        </pre>
-      </div>
-    );
-  }
+  return (
+    <AnimatePresence mode="wait">
+      {phase === "terminal" && (
+        <motion.div
+          key="terminal"
+          className={styles.loader}
+          ref={loaderRef}
+          exit={{ opacity: 0, transition: { duration: 0.4 } }}
+        >
+          <pre>
+            {asciiArt.map((line, idx) => (
+              <div key={`ascii-${idx}`}>{line}</div>
+            ))}
+            {typedLines.map((line, idx) => (
+              <div key={`typed-${idx}`}>{line}</div>
+            ))}
+          </pre>
+        </motion.div>
+      )}
 
-  return <>{children}</>;
+      {phase === "skeleton" && (
+        <motion.div
+          key="skeleton"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Skeleton />
+        </motion.div>
+      )}
+
+      {phase === "done" && (
+        <motion.div
+          key="content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
+        >
+          {children}
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
 };
 
 export default Loader;

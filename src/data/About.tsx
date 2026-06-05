@@ -10,10 +10,10 @@ interface AboutType {
 export const About: AboutType = {
   firstName: "Karl",
   lastName: "Andoque",
-  hackername: "h4NNY4",
-  about: "Cybersecurity Enthusiast | VAPT Engineer | Software Engineer",
+  hackername: "KARL ANDOQUE",
+  about: "IT Officer | Software Engineer",
   description:
-    "Cybersecurity enthusiast with 2 years of experience in software engineering and hands-on exposure to vulnerability assessment and penetration testing (VAPT), currently focusing on offensive security to identify and reduce system vulnerabilities.",
+    "IT Officer with experience in software engineering, system administration, and IT support, focused on building and managing reliable technology solutions for organizations.",
   offer:
-    "I'm currently open to internships and full-time roles in the field of cybersecurity. If you're looking for someone driven, technically capable, and eager to strengthen your security posture, I'm ready to contribute and grow with your team.",
+    "I'm currently open to full-time IT and software engineering roles. If you're looking for someone technically capable across development, system administration, and IT support, I'm ready to contribute and grow with your team.",
 };

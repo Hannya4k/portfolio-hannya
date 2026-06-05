@@ -1,69 +1,82 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Certifications, Certificates, Trainings } from "../data";
 import styles from "../styles/pages/certificates.module.scss";
-import { pageTransition, pageVariants } from "../utils/FramerAnimation";
 import CertificatesCard from "../components/cards/CertificatesCard";
 import { useScramble } from "../hooks/useScramble";
 
+type Tab = "certifications" | "trainings" | "certificates";
+
+const TABS: { key: Tab; label: string }[] = [
+  { key: "certifications", label: "~/certifications" },
+  { key: "trainings", label: "~/trainings" },
+  { key: "certificates", label: "~/certificates" },
+];
+
+const DATA = {
+  certifications: Certifications,
+  trainings: Trainings,
+  certificates: Certificates,
+};
+
+const gridVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.07 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.92 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.3, ease: "easeOut" as const } },
+};
+
 const CertificatesPage = () => {
-  const certificationsHeader = useScramble(
-    "> whoami --certifications",
-    100,
-    200
-  );
-  const trainingsHeader = useScramble("> whoami --trainings", 100, 200);
-  const certificatesHeader = useScramble("> whoami --certificates", 100, 200);
+  const [activeTab, setActiveTab] = useState<Tab>("certifications");
+  const header = useScramble("> whoami --certifications", 100, 200);
+
   return (
-    <div className={styles.certificates}>
+    <section id="certificates" className={styles.certificates}>
       <motion.div
-        initial="init"
-        animate="anim"
-        exit="last"
-        variants={pageVariants}
-        transition={pageTransition}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
       >
         <div className={styles.wrapper}>
-          <h3 className={styles.headers}>{certificationsHeader}</h3>
-          <div className={styles.certificates_content}>
-            {Certifications.map((item, index) => (
-              <CertificatesCard
-                key={`${item.title}-${index}`}
-                title={item.title}
-                image={item.image}
-              />
+          <h3 className={styles.header}>{header}</h3>
+          <div className={styles.tabs}>
+            {TABS.map((tab) => (
+              <button
+                key={tab.key}
+                className={`${styles.tab} ${activeTab === tab.key ? styles.activeTab : ""}`}
+                onClick={() => setActiveTab(tab.key)}
+              >
+                {tab.label}
+              </button>
             ))}
           </div>
-        </div>
-        <div className={styles.wrapper}>
-          <h3 className={styles.headers}>{trainingsHeader}</h3>
-          <div className={styles.scroll_container}>
-            <div className={styles.certificates_content}>
-              {Trainings.map((item, index) => (
-                <CertificatesCard
-                  key={`${item.title}-${index}`}
-                  title={item.title}
-                  image={item.image}
-                />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              className={styles.certificates_content}
+              variants={gridVariants}
+              initial="hidden"
+              animate="visible"
+              exit={{ opacity: 0, transition: { duration: 0.15 } }}
+            >
+              {DATA[activeTab].map((item, index) => (
+                <motion.div key={`${item.title}-${index}`} variants={cardVariants}>
+                  <CertificatesCard
+                    title={item.title}
+                    image={item.image}
+                  />
+                </motion.div>
               ))}
-            </div>
-          </div>
-        </div>
-        <div className={styles.wrapper}>
-          <h3 className={styles.headers}>{certificatesHeader}</h3>
-          <div className={styles.scroll_container}>
-            <div className={styles.certificates_content}>
-              {Certificates.map((item, index) => (
-                <CertificatesCard
-                  key={`${item.title}-${index}`}
-                  title={item.title}
-                  image={item.image}
-                />
-              ))}
-            </div>
-          </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
+
 export default CertificatesPage;

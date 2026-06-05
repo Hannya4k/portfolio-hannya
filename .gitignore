@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# Local config (API keys)
+src/config/
+
+# Personal notes
+portfolio-suggestions.txt
+
+# npm lockfile (project uses yarn)
+package-lock.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
